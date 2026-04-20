@@ -77,23 +77,21 @@
 </template>
 <!-- 场馆列表item -->
 <template name="navigator">
-  <navigator url="../index/index" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
-    <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
-        <image class="weui-media-box__thumb" src="{{item.itemImg}}" />
+  <navigator url="../index/index" class="venue-card" hover-class="weui-cell_active">
+    <view class="venue-card__img">
+        <image class="venue-card__thumb" src="{{item.itemImg}}" />
     </view>
-    <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
-        <view class="weui-media-box__title">{{item.itemTitle}}</view>
-        <view class="weui-media-box__desc">
-          <view style="margin:2% 0">
-              <block wx:for="{{item.itemStar}}" wx:key="*this" wx:for-item="star">
-                <image src="{{star}}" style="width: 15px;height: 15px;" />
-              </block>
-          </view>
-          <view>
-              <view style="color:red;float: left;">{{item.itemprice}}</view>
-              <view style="float: left;margin-left: 5%;">{{item.itempriceH}}</view>  
-              <view style="float: right;">{{item.range}}</view>    
-          </view>
+    <view class="venue-card__bd">
+        <view class="venue-card__title">{{item.itemTitle}}</view>
+        <view class="venue-card__stars">
+            <block wx:for="{{item.itemStar}}" wx:key="*this" wx:for-item="star">
+              <image src="{{star}}" class="venue-card__star" />
+            </block>
+        </view>
+        <view class="venue-card__info">
+            <view class="venue-card__price">{{item.itemprice}}</view>
+            <view class="venue-card__original">{{item.itempriceH}}</view>  
+            <view class="venue-card__distance">{{item.range}}</view>    
         </view>
     </view>
   </navigator>
