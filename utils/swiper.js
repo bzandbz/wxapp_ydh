@@ -257,7 +257,48 @@ var navigaData = [
         itempriceH:'门市价￥20',
         range:'1500m'
       },
-
+      {
+        itemImg:'http://demo.zhilengzhire.com/weui-SPA-index/004.png',
+        itemTitle:'网球馆',
+        itemStar:[
+          'http://demo.zhilengzhire.com/weui-SPA-index/014.png',
+          'http://demo.zhilengzhire.com/weui-SPA-index/014.png',
+          'http://demo.zhilengzhire.com/weui-SPA-index/014.png',
+          'http://demo.zhilengzhire.com/weui-SPA-index/014.png',
+          'http://demo.zhilengzhire.com/weui-SPA-index/014.png',
+        ],
+        itemprice:'￥200',
+        itempriceH:'门市价￥250',
+        range:'2000m'
+      },
+      {
+        itemImg:'http://demo.zhilengzhire.com/weui-SPA-index/005.png',
+        itemTitle:'游泳馆',
+        itemStar:[
+          'http://demo.zhilengzhire.com/weui-SPA-index/014.png',
+          'http://demo.zhilengzhire.com/weui-SPA-index/014.png',
+          'http://demo.zhilengzhire.com/weui-SPA-index/014.png',
+          'http://demo.zhilengzhire.com/weui-SPA-index/014.png',
+          'http://demo.zhilengzhire.com/weui-SPA-index/015.png',
+        ],
+        itemprice:'￥80',
+        itempriceH:'门市价￥100',
+        range:'500m'
+      },
+      {
+        itemImg:'http://demo.zhilengzhire.com/weui-SPA-index/006.png',
+        itemTitle:'篮球馆',
+        itemStar:[
+          'http://demo.zhilengzhire.com/weui-SPA-index/014.png',
+          'http://demo.zhilengzhire.com/weui-SPA-index/014.png',
+          'http://demo.zhilengzhire.com/weui-SPA-index/014.png',
+          'http://demo.zhilengzhire.com/weui-SPA-index/014.png',
+          'http://demo.zhilengzhire.com/weui-SPA-index/014.png',
+        ],
+        itemprice:'￥300',
+        itempriceH:'门市价￥350',
+        range:'1800m'
+      }
     ];
 var location = [
     'http://demo.zhilengzhire.com/weui-SPA-img/020.png',
