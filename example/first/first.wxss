@@ -107,4 +107,83 @@ button[type="primary"] {
 	font-size:12px;
 }
 
+.venue-card-container {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.venue-card-row {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 12px;
+}
+
+.venue-card-row .venue-card {
+  margin-right: 3%;
+}
+
+.venue-card-row .venue-card:last-child {
+  margin-right: 0;
+}
+
+.venue-card {
+  width: 47%;
+  margin-bottom: 12px;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2rpx 8rpx rgba(0, 0, 0, 0.1);
+}
+
+.venue-card-img {
+  width: 100%;
+  height: 180rpx;
+  display: block;
+}
+
+.venue-card-bd {
+  padding: 12rpx;
+}
+
+.venue-card-title {
+  font-size: 28rpx;
+  color: #333;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-bottom: 8rpx;
+}
+
+.venue-card-star {
+  margin-bottom: 8rpx;
+}
+
+.venue-card-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.venue-card-price {
+  display: flex;
+  align-items: baseline;
+}
+
+.price-num {
+  color: #ff6600;
+  font-size: 28rpx;
+  font-weight: bold;
+}
+
+.price-h {
+  color: #999;
+  font-size: 20rpx;
+  margin-left: 8rpx;
+}
+
+.venue-card-range {
+  color: #999;
+  font-size: 20rpx;
+}
 
