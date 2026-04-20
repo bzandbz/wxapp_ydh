@@ -79,14 +79,29 @@
                 <view class="panel-title" style="float: left;">热门场馆</view>
                 <view class="weui-cell__bd" style="float: right;">
                     <view style="float: left;padding-top: 1.5%;padding-right: 1%;color:gray;" bindtap="vunue">查看更多</view>
-                    <image src="{{place_url[0]}}" style="width: 6px;height: 12px;display:inline-block; margin-top: 8%;" />   
+                    <image src="{{place_url[0]}}" style="width: 6px;height: 12px;display:inline-block; margin-top: 8%;" />
                 </view>
-                <!-- <view class="weui-cell__ft weui-cell__ft_in-access"></view> -->
             </view>
             <view class="weui-panel__bd">
-                <block wx:for="{{navigaData}}" wx:key="id">
-                    <template is="navigator" data="{{item}}" />
-                </block>
+                <view class="venue-cards-container">
+                    <block wx:for="{{navigaData}}" wx:key="id">
+                        <view class="venue-card">
+                            <image class="venue-card-img" src="{{item.itemImg}}" />
+                            <view class="venue-card-content">
+                                <view class="venue-card-title">{{item.itemTitle}}</view>
+                                <view class="venue-card-stars">
+                                    <block wx:for="{{item.itemStar}}" wx:key="*this" wx:for-item="star">
+                                        <image src="{{star}}" class="venue-star" />
+                                    </block>
+                                </view>
+                                <view class="venue-card-bottom">
+                                    <view class="venue-card-price">{{item.itemprice}}</view>
+                                    <view class="venue-card-range">{{item.range}}</view>
+                                </view>
+                            </view>
+                        </view>
+                    </block>
+                </view>
             </view>
         </view>   
     </view>
