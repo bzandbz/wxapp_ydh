@@ -94,9 +94,41 @@
               <view style="float: left;margin-left: 5%;">{{item.itempriceH}}</view>  
               <view style="float: right;">{{item.range}}</view>    
           </view>
+              <view style="float: right;">{{item.range}}</view>    
+          </view>
         </view>
     </view>
   </navigator>
+</template>
+
+<template name="venueCard">
+  <view class="venue-card">
+    <navigator url="../index/index" hover-class="weui-cell_active">
+      <image class="venue-card-img" src="{{item.itemImg}}" />
+      <view class="venue-card-bd">
+        <view class="venue-card-title">{{item.itemTitle}}</view>
+        <view class="venue-card-star">
+          <block wx:for="{{item.itemStar}}" wx:key="*this" wx:for-item="star">
+            <image src="{{star}}" style="width: 12px;height: 12px;" />
+          </block>
+        </view>
+        <view class="venue-card-bottom">
+          <view class="venue-card-price">
+            <text class="price-num">{{item.itemprice}}</text>
+            <text class="price-h">{{item.itempriceH}}</text>
+          </view>
+          <view class="venue-card-range">{{item.range}}</view>
+        </view>
+      </view>
+    </navigator>
+  </view>
+</template>
+
+<template name="venueCardRow">
+  <view class="venue-card-row">
+    <template is="venueCard" data="{{item: row[0]}}" />
+    <template wx:if="{{row[1]}}" is="venueCard" data="{{item: row[1]}}" />
+  </view>
 </template>
 <!-- 预定场馆 -->
 <template name="requires">

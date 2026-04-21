@@ -12,7 +12,7 @@ Page({
       'http://demo.zhilengzhire.com/weui-SPA-index/022.png'
     ],
     chooseItem:'',
-    
+    venueCardRows: [],
     
     
   },
@@ -21,6 +21,19 @@ Page({
           inputShowed: true
       });
   },
+
+  formatVenueCards: function(data) {
+    var rows = [];
+    var maxItems = 10;
+    var limitedData = data.slice(0, maxItems);
+    
+    for (var i = 0; i < limitedData.length; i += 2) {
+      var row = limitedData.slice(i, i + 2);
+      rows.push(row);
+    }
+    return rows;
+  },
+
   hideInput: function () {
       this.setData({
           inputVal: "",
@@ -80,7 +93,8 @@ Page({
       swiper: Data.swiper,
       icons: Data.icons,
       navigaData: Data.navigaData,
-      Middlebanner:Data.Middlebanner
+      Middlebanner:Data.Middlebanner,
+      venueCardRows: that.formatVenueCards(Data.navigaData)
     });
     app.getUserInfo(function (userInfo) {
       //更新数据
